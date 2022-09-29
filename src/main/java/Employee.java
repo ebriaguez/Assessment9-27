@@ -13,6 +13,6 @@ public abstract class Employee extends Customer{
         return DISCOUNT;
     }
 
-    public abstract void printEmpPriceAfterDisc();
+    public abstract void printEmpPriceAfterDisc(Clothing clothing); //
 
 }

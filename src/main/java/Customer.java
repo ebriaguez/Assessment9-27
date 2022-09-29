@@ -11,13 +11,10 @@ public abstract class Customer extends Person {
         this.size = size;
     }
 
-    public Clothing[] getClothingItems() {
-        return clothingItems;
-    }
-
-    public void setClothingItems(Clothing[] clothingItems) {
-        this.clothingItems = clothingItems;
-    }
+    //
+   public Customer(String name, String description, double price, char size){
+        super(name);
+   }
 
     public char getSize() {
         return size;

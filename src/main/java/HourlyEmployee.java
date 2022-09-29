@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class HourlyEmployee extends Employee implements Discountable{
+    private final double DISCOUNT = 0.10;
 
 
     public HourlyEmployee(String name, Clothing[] clothingItems, char size) {
@@ -8,15 +9,12 @@ public class HourlyEmployee extends Employee implements Discountable{
     }
 
     @Override
-    public double calcDiscount() {
-        double getTotal = getDISCOUNT();
-        return getTotal;
+    public double calcDiscount(Clothing clothing) { //
+        return clothing.getPrice() * DISCOUNT;
     }
 
     @Override
-    public void printEmpPriceAfterDisc() {
-        for(int x = 0; x < getClothingItems().length; x++){
-            System.out.println(getClothingItems());
-        }
+    public void printEmpPriceAfterDisc(Clothing clothing) { //
+        System.out.println(clothing.getPrice() - calcDiscount(clothing));
     }
 }
